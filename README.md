@@ -38,11 +38,10 @@ I used the [FIFA World Cup 2022 Player Data](https://www.kaggle.com/datasets/swa
 - Weighting metrics for composite score would sum up to 1. This would ensure interpretability and normalization, as it represents a weighted average (i.e 40% weight to goals scored and 15% weight to expected goals)
 - Composite scores will be calculated by applying the weights to the standardized metrics and summing the results
 
-- **3) Assigning weighted average for each KPI to determine player from each category cumulative performance** 
+**3) Assigning weighted average for each KPI to determine player from each category cumulative performance** 
 
-**Attacker KPIs** 
-
-player_shooting, player_possesion 
+**Attacker KPIs**
+player_shooting
 
 | KPI  | Description | Normalize Weight  | Rationale for weighting  |
 | --- | --- | --- | --- |
@@ -57,8 +56,7 @@ player_shooting, player_possesion
 *Note: while goals_per_shot_on_target and goals_per_shot might not be mutually exclusive as I have already considered goals, shots, and shots_on_target as the KPI, I believe that these 2 metrics provide added value as they highlight different aspects of attacker shooting efficiency* 
 
 **Defense KPIs**
-
-player_defense, player_possesion
+player_defense
 
 | KPI  | Description | Normalize Weight  | Rationale for weighting  |
 | --- | --- | --- | --- |
@@ -72,7 +70,6 @@ player_defense, player_possesion
 | errors | Mistakes leading to an opponent’s shot | -0.1 | Defensive errors leading to shots are detrimental |
 
 **Midfielders KPIs**
-
 player_passing, player_posession
 
 | KPI  | Description | Normalize Weight  | Reason for weighting  |
@@ -92,3 +89,7 @@ player_passing, player_posession
 | progressive_passes_received  | Number of forward passes received by the player | +0.1 | Demonstrates ability to receive and make use of progressive passes, important for advancing play. |
 
 Please bear in mind that the above metrics and weighted scores are subjective and may differ from person to person!
+
+**Tools:** 
+- Python (Panda, Numpy, Matplotlib)
+- Predictive modelling (Random Forest Regressor, Gradient Boost Regressor, SVR, Neural Network) 
