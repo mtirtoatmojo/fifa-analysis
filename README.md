@@ -10,8 +10,6 @@ I love sports and outdoor activities - but if there's one thing that I can't see
 
 In this project, I will analyze player performance in the Qatar FIFA World Cup 2022 by categorizing players into three distinct groups: Defense, Attackers, and Midfielders. By calculating composite scores based on key performance metrics, I aim to identify the top players in each category. The composite scores will be derived from relevant metrics, each weighted according to its importance, to provide a comprehensive assessment of player performance. I also aim to answer a couple interesting questions such as looking at the correlation between age and players performance. Lastly, I will develop a model that would predict the number of goals based on the composite scores we have computed. 
 
-You can view the complete code and the original dataset in my Github repository here [insert link]
-
 **Questions to be answered:** 
 
 - Who are the top 10 attackers?
@@ -63,13 +61,13 @@ player_defense
 | KPI  | Description | Normalize Weight  | Rationale for weighting  |
 | --- | --- | --- | --- |
 | tackles  | Number of players tackled  | +0.2 | Tackles are crucial as they directly prevent the opposing team from advancing and creating scoring opportunities |
-| tackles_won | Tackles in which the tackler's team won possession of the ball | +0.1  | Winning possession is important but slightly less critical than the act of tackling itself. |
-| dribble_tackles | Number of dribblers tackled | +0.2 | Successfully tackling dribblers is highly valuable as it stops skilled opponents from making dangerous plays. |
-| dribbled_past | Number of times dribbled past by opposing players | -0.1 | Being dribbled past indicates a defensive weakness |
+| tackles_won | Tackles in which the tackler's team won possession of the ball | +0.25  | Winning possession is important but slightly less critical than the act of tackling itself. |
+| dribble_tackles | Number of dribblers tackled | +0.15 | Successfully tackling dribblers is highly valuable as it stops skilled opponents from making dangerous plays. |
+| dribbled_past | Number of times dribbled past by opposing players | -0.05 | Being dribbled past indicates a defensive weakness |
 | blocks | Numbers of times blocking the ball by standing in its path  | +0.1 | Blocking is essential for stopping shots and passes, contributing significantly to defensive strength. |
 | interceptions | Number of times intercepting the ball | +0.2 | Interceptions are key to breaking up the opponent's play and initiating counterattacks. |
-| clearances | Number of times clearing the ball from the defensive area. | +0.15 | Clearances are important for relieving pressure and preventing goal-scoring opportunities. |
-| errors | Mistakes leading to an opponent’s shot | -0.1 | Defensive errors leading to shots are detrimental |
+| clearances | Number of times clearing the ball from the defensive area. | +0.2 | Clearances are important for relieving pressure and preventing goal-scoring opportunities. |
+| errors | Mistakes leading to an opponent’s shot | -0.05 | Defensive errors leading to shots are detrimental |
 
 **Midfielders KPIs**
 player_passing, player_posession
