@@ -1,5 +1,7 @@
 # fifa-analysis
 
+**Please find the writeups for this analysis in my notion [here](https://www.notion.so/Analyzing-Players-Performance-in-the-2022-FIFA-World-Cup-60f469e665a342fb95a185e2cdd2b233)**
+
 **Intro:** 
 
 I love sports and outdoor activities - but if there's one thing that I can't seem to wrap my head around, it's going to be soccer. However, my boyfriend loves playing and watching soccer and I have recently enjoyed the festivities of watching 2024 Euros and COPA America match with him which led me to do this analysis as I thought it'd be fun to kick off my very first data project around soccer, specifically the 2022 QATAR World Cup! 
@@ -35,10 +37,10 @@ I used the [FIFA World Cup 2022 Player Data](https://www.kaggle.com/datasets/swa
 
 - For each category, I will identify key performance metrics (KPI) that are crucial for assessing the effectiveness of players’ cumulative performance. Considering that there are various KPIs to choose from the player dataset, I will use my best judgement in soccer (more like my boyfriend’s) to pick and choose which factors are crucial to include.
 - Next, I will assign different weights to each of these KPIs based on its importance (i.e to assess attackers’ performance, scoring a goal would have higher weights compared to shots on target)
-- Weighting metrics for composite score would sum up to 1. This would ensure interpretability and normalization, as it represents a weighted average (i.e 40% weight to goals scored and 15% weight to expected goals)
+- Weighting metrics for composites score would sum up to 1. This would ensure interpretability and normalization, as it represents a weighted average (i.e 40% weight to goals scored and 15% weight to expected goals)
 - Composite scores will be calculated by applying the weights to the standardized metrics and summing the results
 
-**3) Assigning weighted average for each KPI to determine player from each category cumulative performance** 
+**3) Assigning weighted average for each KPI to determine players from each categories cumulative performance** 
 
 **Attacker KPIs**
 player_shooting
